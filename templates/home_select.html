@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+{% block content %}
+  <form action="/story_prompt" method="get">
+    <select name="story_option">
+      {% for story_option in story_options %}
+        <option value={{story_option}}>{{story_option}}</option>
+      {% endfor %}
+    </select>
+    <button>Submit</button>
+  </form>
+{% endblock %}
+
